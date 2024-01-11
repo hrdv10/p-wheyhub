@@ -73,6 +73,8 @@ const images = post.frontmatter.image
         name: x.name,
         src: require(`./../pages${post.frontmatter.path}${x.src}.jpg`)
         }))
+        <BuyButton post={post.frontmatter} images={images}>
+</BuyButton>
     `
        
           
