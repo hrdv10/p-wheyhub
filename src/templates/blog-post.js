@@ -40,6 +40,33 @@ script={[{
           }
         }
       }
+      <a 
+    href='#' 
+    className='snipcart-add-item'
+    data-item-id={post.id}
+    data-item-price={post.price}
+    data-item-image={post.image}
+    data-item-name={post.title}
+    data-item-description={post.description}
+    data-item-url={"http://snipcart-gatsby.netlify.com" + post.path}>
+    Buy
+</a>
+
+<img src={imgSrc}></img>
+
+<div dangerouslySetInnerHTML={{ __html: post.html }} /> 
+
+<a
+    href='#' 
+    className='snipcart-add-item buyBtn'
+    data-item-id={post.frontmatter.id}
+    data-item-price={post.frontmatter.price}
+    data-item-image={post.frontmatter.image}
+    data-item-name={post.frontmatter.title}
+    data-item-description={post.frontmatter.description}
+    data-item-url={"http://snipcart-gatsby.netlify.com" + post.frontmatter.path}>
+    Buy
+</a>
     `
        
           
