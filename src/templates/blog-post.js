@@ -17,6 +17,30 @@ script={[{
   type: 'text/javascript',
   src:"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
 }]} />
+  export const pageQuery = graphql`
+      query BlogPostBySlug($slug: String!) {
+        site {
+          siteMetadata {
+            title
+            author
+          }
+        }
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+          id
+          excerpt
+          html
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            price
+            id
+            path
+            description
+            image
+          }
+        }
+      }
+    `
        
           
  
