@@ -67,6 +67,12 @@ script={[{
     data-item-url={"http://snipcart-gatsby.netlify.com" + post.frontmatter.path}>
     Buy
 </a>
+import BuyButton from '../components/BuyButton'
+const images = post.frontmatter.image
+        .map(x => ({
+        name: x.name,
+        src: require(`./../pages${post.frontmatter.path}${x.src}.jpg`)
+        }))
     `
        
           
